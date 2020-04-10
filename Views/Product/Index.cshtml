@@ -1,0 +1,42 @@
+﻿@model IEnumerable<Product>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    //Transient
+    var data01 = ViewBag.data01;
+    var data02 = ViewBag.data02;
+
+
+    //Singleto
+    var data03 = ViewBag.data03;
+    var data04 = ViewBag.data04;
+
+    //Scoped
+    var data05 = ViewBag.data05;
+    var data06 = ViewBag.data06;
+  
+
+}
+
+<h2>Transient</h2>
+<span>@data01.Title - [Price:@data01.Price] - CountServer:@ViewBag.count01</span>
+<br />
+<span>@data02.Title - [Price:@data02.Price] - CountServer:@ViewBag.count02</span>
+
+<p>----------------------------------------------</p>
+
+<h2>Singleto</h2>
+<span>@data03.Title - [Price:@data03.Price] - CountServer:@ViewBag.count03</span>
+<br />
+<span>@data04.Title - [Price:@data04.Price] - CountServer:@ViewBag.count04</span>
+
+<p>----------------------------------------------</p>
+
+<h2>Scoped</h2>
+<span>@data05.Title - [Price:@data05.Price] - CountServer:@ViewBag.count05</span>
+<br />
+<span>@data06.Title - [Price:@data06.Price] - CountServer:@ViewBag.count06</span>
+
+    
